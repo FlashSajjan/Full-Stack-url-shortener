@@ -1,5 +1,5 @@
-A full-stack URL shortening service with user authentication, analytics tracking, and admin management capabilities. Built with Spring Boot backend and React frontend.
-
+**A full-stack URL shortening service with user authentication, analytics tracking, and admin management capabilities. Built with Spring Boot backend and React frontend.
+**
 Core Functionality
 - URL Shortening: Convert long URLs into short, shareable links
 - Custom Short URLs: Create personalized short links
