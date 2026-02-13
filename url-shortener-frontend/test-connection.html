@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Backend Connection</title>
+</head>
+<body>
+    <h1>Test Backend Connection</h1>
+    <button onclick="testRegister()">Test Register</button>
+    <button onclick="testLogin()">Test Login</button>
+    <pre id="output"></pre>
+
+    <script>
+        const API_URL = 'http://localhost:8080';
+        
+        async function testRegister() {
+            const output = document.getElementById('output');
+            output.textContent = 'Testing registration...\n';
+            
+            try {
+                const response = await fetch(`${API_URL}/api/auth/public/register`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: 'testuser' + Date.now(),
+                        email: 'test' + Date.now() + '@example.com',
+                        password: 'password123'
+                    })
+                });
+                
+                const data = await response.text();
+                output.textContent += `Status: ${response.status}\n`;
+                output.textContent += `Response: ${data}\n`;
+            } catch (error) {
+                output.textContent += `Error: ${error.message}\n`;
+            }
+        }
+        
+        async function testLogin() {
+            const output = document.getElementById('output');
+            output.textContent = 'Testing login...\n';
+            
+            try {
+                const response = await fetch(`${API_URL}/api/auth/public/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: 'testuser123',
+                        password: 'password123'
+                    })
+                });
+                
+                const data = await response.json();
+                output.textContent += `Status: ${response.status}\n`;
+                output.textContent += `Token: ${data.token}\n`;
+            } catch (error) {
+                output.textContent += `Error: ${error.message}\n`;
+            }
+        }
+    </script>
+</body>
+</html>
