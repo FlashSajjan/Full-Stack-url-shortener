@@ -9,10 +9,10 @@ set JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-25.0.0.36-hotspot
 set PATH=%JAVA_HOME%\bin;%PATH%
 
 REM Set environment variables
-set SPRING_DATABASE_URL=jdbc:postgresql://ep-summer-rain-aigtzdpg.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require
-set SPRING_DATABASE_URL_USERNAME=neondb_owner
-set SPRING_DATABASE_URL_PASSWORD=npg_fRCpNQ8aov7I
-set JWT_SECRET=L4FpnevPLSMYGhOQKc86keL6WukbjutpHUlM056Ns15pr86JjhiLwDseG6LBBc2GwSBfoHRBXEzr7BOHp6rWaS
+set SPRING_DATABASE_URL=
+set SPRING_DATABASE_URL_USERNAME=
+set SPRING_DATABASE_URL_PASSWORD=
+set JWT_SECRET=
 set JWT_EXPIRATION=72800000
 set FRONTEND_URL=http://localhost:5173
 
