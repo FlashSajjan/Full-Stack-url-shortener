@@ -1,5 +1,6 @@
 **A full-stack URL shortening service with user authentication, analytics tracking, and admin management capabilities. Built with Spring Boot backend and React frontend.
 **
+Below is the architecture design (Local)
 <img width="1024" height="1536" alt="ChatGPT Image Feb 14, 2026, 06_07_11 PM" src="https://github.com/user-attachments/assets/7ffa94cd-0986-4e7a-bfff-a9e9620efa81" />
 
 Core Functionality
